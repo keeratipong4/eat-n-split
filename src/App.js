@@ -68,10 +68,12 @@ export default function App() {
           {openFormAddFriend ? "Close" : "Add friend"}
         </Button>
       </div>
+
       {selectedFriend && (
         <FormSliptBill
           selectedFriend={selectedFriend}
           onSplitBill={handleSplitBill}
+          key={selectedFriend?.id}
         />
       )}
     </div>
